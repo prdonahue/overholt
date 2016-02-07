@@ -7,10 +7,10 @@
 """
 
 from ..factories import CategoryFactory, ProductFactory
-from . import OverholtApiTestCase
+from . import MyAppApiTestCase
 
 
-class ProductApiTestCase(OverholtApiTestCase):
+class ProductApiTestCase(MyAppApiTestCase):
 
     def _create_fixtures(self):
         super(ProductApiTestCase, self)._create_fixtures()

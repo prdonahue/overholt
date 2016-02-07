@@ -6,16 +6,16 @@
     api tests package
 """
 
-from overholt.api import create_app
+from myapp.api import create_app
 
-from .. import OverholtAppTestCase, settings
+from .. import MyAppAppTestCase, settings
 
 
-class OverholtApiTestCase(OverholtAppTestCase):
+class MyAppApiTestCase(MyAppAppTestCase):
 
     def _create_app(self):
         return create_app(settings, register_security_blueprint=True)
 
     def setUp(self):
-        super(OverholtApiTestCase, self).setUp()
+        super(MyAppApiTestCase, self).setUp()
         self._login()

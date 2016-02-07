@@ -8,17 +8,17 @@
 
 from unittest import TestCase
 
-from overholt.core import db
+from myapp.core import db
 
 from .factories import UserFactory
 from .utils import FlaskTestCaseMixin
 
 
-class OverholtTestCase(TestCase):
+class MyAppTestCase(TestCase):
     pass
 
 
-class OverholtAppTestCase(FlaskTestCaseMixin, OverholtTestCase):
+class MyAppAppTestCase(FlaskTestCaseMixin, MyAppTestCase):
 
     def _create_app(self):
         raise NotImplementedError
@@ -27,7 +27,7 @@ class OverholtAppTestCase(FlaskTestCaseMixin, OverholtTestCase):
         self.user = UserFactory()
 
     def setUp(self):
-        super(OverholtAppTestCase, self).setUp()
+        super(MyAppAppTestCase, self).setUp()
         self.app = self._create_app()
         self.client = self.app.test_client()
         self.app_context = self.app.app_context()
@@ -37,7 +37,7 @@ class OverholtAppTestCase(FlaskTestCaseMixin, OverholtTestCase):
         self._create_csrf_token()
 
     def tearDown(self):
-        super(OverholtAppTestCase, self).tearDown()
+        super(MyAppAppTestCase, self).tearDown()
         db.drop_all()
         self.app_context.pop()
 

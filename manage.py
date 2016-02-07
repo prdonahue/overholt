@@ -8,8 +8,8 @@
 
 from flask.ext.script import Manager
 
-from overholt.api import create_app
-from overholt.manage import CreateUserCommand, DeleteUserCommand, ListUsersCommand
+from myapp.api import create_app
+from myapp.manage import CreateUserCommand, DeleteUserCommand, ListUsersCommand
 
 manager = Manager(create_app())
 manager.add_command('create_user', CreateUserCommand())

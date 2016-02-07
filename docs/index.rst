@@ -1,4 +1,4 @@
-Welcome to Overholt's documentation!
+Welcome to MyApp's documentation!
 ====================================
 
 Contents:

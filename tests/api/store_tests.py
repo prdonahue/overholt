@@ -7,10 +7,10 @@
 """
 
 from ..factories import StoreFactory, ProductFactory
-from . import OverholtApiTestCase
+from . import MyAppApiTestCase
 
 
-class StoreApiTestCase(OverholtApiTestCase):
+class StoreApiTestCase(MyAppApiTestCase):
 
     def _create_fixtures(self):
         super(StoreApiTestCase, self)._create_fixtures()
@@ -28,7 +28,7 @@ class StoreApiTestCase(OverholtApiTestCase):
     def test_create_store(self):
         r = self.jpost('/stores', data={
             'name': 'My Store',
-            'address': '123 Overholt Drive',
+            'address': '123 MyApp Drive',
             'city': 'Brooklyn',
             'state': 'New York',
             'zip_code': '12345'

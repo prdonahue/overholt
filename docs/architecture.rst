@@ -1,4 +1,4 @@
-Overholt Architecture Documentation
+MyApp Architecture Documentation
 ===================================
 
 Documentation describing the application's architecture goes here.

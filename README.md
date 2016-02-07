@@ -1,6 +1,6 @@
-# Overholt
+# MyApp
 
-Overholt is an example Flask application illustrating some of my common practices
+MyApp is an example Flask application illustrating some of my common practices
 
 ## Development Environment
 
@@ -23,12 +23,12 @@ The following assumes you have all of the recommended tools listed above install
 
 #### 1. Clone the project:
 
-    $ git clone git@github.com:mattupstate/overholt.git
-    $ cd overholt
+    $ git clone git@github.com:mattupstate/myapp.git
+    $ cd myapp
 
 #### 2. Create and initialize virtualenv for the project:
 
-    $ mkvirtualenv overholt
+    $ mkvirtualenv myapp
     $ pip install -r requirements.txt
 
 #### 3. Install the required cookbooks:
@@ -53,7 +53,7 @@ The following assumes you have all of the recommended tools listed above install
 
 #### 8. In another console run the Celery app:
 
-    $ celery -A overholt.tasks worker
+    $ celery -A myapp.tasks worker
 
 #### 9. Open [http://localhost:5000](http://localhost:5000)
 
@@ -69,7 +69,7 @@ This application uses [Alembic](http://alembic.readthedocs.org/) for database
 migrations and schema management. Changes or additions to the application data
 models will require the database be updated with the new tables and fields.
 Additionally, ensure that any new models are imported into the consolidated
-models file at `overholt.models`. To generate a migration file based on the
+models file at `myapp.models`. To generate a migration file based on the
 current set of models run the following command:
 
     $ alembic revision --autogenerate -m "<a description of what was modified>"
